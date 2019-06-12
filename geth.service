@@ -1,0 +1,11 @@
+[Unit]
+Description=Ethereum Geth
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/geth --config /mnt/geth/config-rinkeby.toml
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
